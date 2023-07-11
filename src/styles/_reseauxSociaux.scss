@@ -1,0 +1,28 @@
+.reseaux-sociaux-container {
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        // height: 3rem;
+        background-color: burlywood;
+    }
+
+    li {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    i {
+        font-size: 8rem;
+    }
+
+    a {
+        transition-property: font-size;
+        transition-duration: 0.8s;
+        transition-delay: 0.2s;
+
+        &:hover {
+            color: chartreuse;
+        }
+    }
+}
