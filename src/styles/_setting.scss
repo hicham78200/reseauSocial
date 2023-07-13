@@ -19,6 +19,9 @@ body {
 .btn {
     background-color: blue;
     font-size: 3rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    padding: 1rem;
 
     &:hover {
         background-color: red;

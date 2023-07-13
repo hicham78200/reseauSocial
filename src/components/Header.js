@@ -2,12 +2,14 @@
 import React, { Component } from 'react'
 import ReseauxSociaux from './ReseauxSociaux';
 import ToogleButton from './ToogleButton';
+import Compteur from './Compteur';
+import Horloge from './Horloge';
 
 class Header extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            visibility: false
+            visibility: true
         }
         this.toggleVisibility = this.toggleVisibility.bind(this)
     }
@@ -25,16 +27,18 @@ class Header extends Component {
                     <div className='header-container'>
                         <h1>réseau social privé entreprise</h1>
                         <img src="https://via.placholder.com/800x150" alt="logo entreprise" />
-
                     </div>
                     {console.log(this)}
+
+                    <Horloge />
+
+                    <button className='btn' onClick={this.toggleVisibility}>Cliquez sur le boutton</button>
                     <p>Bonjour je suis {this.props.user[0]} {this.props.user[1]}</p>
                     {/* <p>Aujourd'hui nous somme le : {this.state.date}</p> */}
 
-                    <button className='btn' onClick={this.toggleVisibility}>Cliquez sur le boutton</button>
-
                     <ReseauxSociaux />
                     <ToogleButton />
+                    <Compteur />
                 </>
             )
         } else {
