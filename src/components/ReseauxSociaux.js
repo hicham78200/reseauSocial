@@ -5,19 +5,19 @@ const ReseauxSociaux = () => {
         <div className='reseaux-sociaux-container'>
             <ul>
                 <li><a href="https://fr.linkedin.com" target='_blank'>
-                    <i class="fa-brands fa-linkedin"></i>
+                    <i className="fa-brands fa-linkedin"></i>
                 </a>
                 </li>
                 <li><a href="https://twitter.com" target='_blank'>
-                    <i class="fa-brands fa-square-twitter"></i>
+                    <i className="fa-brands fa-square-twitter"></i>
                 </a>
                 </li>
                 <li><a href="https://www.e-genieclimatique.com" target='_blank'>
-                    <i class="fas fa-code"></i>
+                    <i className="fas fa-code"></i>
                 </a>
                 </li>
                 <li><a href="https://youtube.com" target='_blank'>
-                    <i class="fa-brands fa-youtube"></i>
+                    <i className="fa-brands fa-youtube"></i>
                 </a>
                 </li>
             </ul>

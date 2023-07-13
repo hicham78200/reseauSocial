@@ -18,4 +18,9 @@ body {
 
 .btn {
     background-color: blue;
+    font-size: 3rem;
+
+    &:hover {
+        background-color: red;
+    }
 }
