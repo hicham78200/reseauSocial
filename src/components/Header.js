@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 import ReseauxSociaux from './ReseauxSociaux';
 import ToogleButton from './ToogleButton';
 import Compteur from './Compteur';
-import Horloge from './Horloge';
+import Input from './Input';
+// import Horloge from './Horloge';
 
 class Header extends Component {
     constructor(props) {
@@ -30,7 +31,8 @@ class Header extends Component {
                     </div>
                     {console.log(this)}
 
-                    <Horloge />
+                    {/* <Horloge /> */}
+                    <Input />
 
                     <button className='btn' onClick={this.toggleVisibility}>Cliquez sur le boutton</button>
                     <p>Bonjour je suis {this.props.user[0]} {this.props.user[1]}</p>

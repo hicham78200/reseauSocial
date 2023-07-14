@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 
+const FormatDate = (props) => {
+    return <h2>Il est : {props.date.toLocaleTimeString()}</h2>
+}
+
 class Horloge extends Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            date: new Date().toLocaleTimeString()
+            date: new Date(),
         }
         this.tictac = this.tictac.bind(this);
     }
@@ -15,19 +19,19 @@ class Horloge extends Component {
     }
 
     componentWillUnmount() {
-        clearInterval(this.timerID)
+        clearInterval(this.timerID);
     }
 
     tictac() {
         this.setState({
-            date: new Date().toLocaleTimeString()
+            date: new Date(),
         })
     }
 
     render() {
         return (
             <div>
-                <h2>Il est : {this.state.date}</h2>
+                <FormatDate date={this.state.date} />
             </div>
         );
     }

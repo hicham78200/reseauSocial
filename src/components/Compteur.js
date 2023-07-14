@@ -11,15 +11,18 @@ class Compteur extends Component {
     }
 
     incremente() {
-        this.setState(
-            { cpt: this.state.cpt + 1 }
-        )
+        this.setState((state) => ({
+            cpt: this.state.cpt + 1
+        }))
     }
 
     decremente() {
-        this.setState(
-            { cpt: this.state.cpt - 1 }
-        )
+        // this.setState(
+        //     { cpt: this.state.cpt - 1 }
+        // )
+        this.setState((state) => ({
+            cpt: this.state.cpt - 1
+        }))
     }
 
     reset() {
