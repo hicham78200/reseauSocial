@@ -1,4 +1,9 @@
 import Header from "./components/Header";
+import InfoWebApi from "./components/StatesEtProps";
+import InputCallback from "./components/InputCallback";
+
+
+import ControleAge from "./components/ControleAge";
 
 const tab = ['hicham', 'ashar']
 // const dataApi = {
@@ -11,6 +16,10 @@ function App() {
 
   return (
     <div className="App">
+      <InfoWebApi />
+
+      <ControleAge />
+      <InputCallback />
       <Header user={tab} />
 
     </div>
