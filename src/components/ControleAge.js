@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
 
+const Resultat = (props) => {
+    return (
+        <div className='m-2rem'>
+            Le resultat est : {props.ControleAge ? "entrez votre age" :
+                props.userAge >= 18 ? "Vous etes majeur" : "Vous etes mineur"}
+        </div>
+    )
+}
+
 class ControleAge extends Component {
     constructor(props) {
         super(props)
@@ -29,6 +38,7 @@ class ControleAge extends Component {
         }))
     }
     //mettre une value a linput pr la recuperer
+
     render() {
         //au clic de btnSubmit mettre la valeur quil ya ds linput ds la var userAge
         const btnSubmit =
@@ -38,23 +48,36 @@ class ControleAge extends Component {
                 ENVOYER
             </button>
         const majeur =
-            <button
+            <p
                 className='btn'
                 style={{ backgroundColor: "green" }}
                 onClick={this.handleSubmit}>
                 Vous êtes majeur
-            </button>
+            </p>
         const mineur =
-            <button
+            <p
                 className='btn'
                 onClick={this.handleSubmit}>
                 Vous êtes mineur
-            </button>
+            </p>
+
+        const inputStyle = {
+            border: "5px solid black"
+        }
+
+        const inputStyleRed = {
+            border: "15px solid red"
+        }
+
+        console.log(this.state.input.length)
+        //savoir cb de chiffre jai dans mon input
+        const condition = this.state.input.length > 2
         return (
             <>
                 <div>
                     <h4>Controle de l'age : </h4>
                     <input
+                        style={condition ? inputStyleRed : inputStyle}
                         type="number"
                         value={this.state.input}
                         onChange={this.handleChange} />
@@ -62,6 +85,9 @@ class ControleAge extends Component {
 
                 {this.state.userAge === "" ? btnSubmit : this.state.userAge >= 18
                     ? majeur : mineur}
+
+                <Resultat ControleAge={this.state.userAge === "" ? true : false}
+                    userAge={this.state.userAge} />
             </>
         );
     }
